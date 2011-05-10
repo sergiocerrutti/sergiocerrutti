@@ -1,0 +1,85 @@
+﻿/*
+Created by Sergio Cerrutti
+http://www.sergiocerrutti.com
+March 2011
+*/
+
+@import "reset.css";
+
+/* ---------------- Basic styles ---------------- */
+
+body { background:#3d3d3d url(../img/bg.jpg) repeat center top; font:12px Arial, Helvetica, sans-serif normal; color:#3d3d3d; }
+	p { line-height:16px; margin-bottom:10px; }
+	a { color:#555555; outline:none; }
+	strong { font-weight:bold; }
+
+
+/* ---------------- Layout ---------------- */
+
+#wrapper-top { background-color:#191919; background-image:-moz-linear-gradient(top, #000, #333);/* FF3.6 */ background-image:-webkit-gradient(linear,left top,left bottom,color-stop(0, #000),color-stop(1, #333));/* Saf4+, Chrome */ background-image:-webkit-linear-gradient(#000, #333);/* Chrome 10+, Saf6 */ background-image:linear-gradient(top, #000, #333); filter:progid:DXImageTransform.Microsoft.gradient(startColorStr='#000', EndColorStr='#333'); /* IE6–IE9 */ width:100%; -moz-box-shadow:0 20px 20px rgba(0,0,0, 0.5); -webkit-box-shadow:0 20px 20px rgba(0,0,0, 0.5); box-shadow:0 20px 20px rgba(0,0,0, 0.5); position:absolute; top:-557px; z-index:10; opacity:0; opacity:0; -moz-opacity:0; -khtml-opacity:0; filter:alpha(opacity=0); }
+#wrapper { width:800px; margin:50px auto; overflow:hidden; }
+  #profile  { margin-bottom:20px; display:table; position:relative; }
+  section { background-color:#fff; background-repeat:no-repeat; background-position:740px 30px; width:740px; padding:30px; margin-bottom:20px; -webkit-border-radius:5px; -moz-border-radius:5px; border-radius:5px; -moz-box-shadow:1px 2px 5px rgba(0,0,0, 0.5); -webkit-box-shadow:1px 2px 5px rgba(0,0,0, 0.5); box-shadow:1px 2px 5px rgba(0,0,0, 0.5); cursor:pointer; }
+
+
+/* ---------------- Top ---------------- */
+
+#flickr-alert { background:transparent url(../img/bg-flickr.png) no-repeat left bottom; width:227px; height:41px; text-indent:-9999px; margin-left:250px; position:absolute; bottom:-41px; left:50%;  }
+
+  
+/* ---------------- Header ---------------- */
+  
+#photo { background-color:#fff; width:250px; height:251px; padding:20px; margin-right:30px; -webkit-border-radius:5px; -moz-border-radius:5px; border-radius:5px; -moz-box-shadow:1px 2px 5px rgba(0,0,0, 0.5); -webkit-box-shadow:1px 2px 5px rgba(0,0,0, 0.5); box-shadow:1px 2px 5px rgba(0,0,0, 0.5); display:inline; float:left; }
+#social { background-color:#fff; width:232px; height:233px; color:#777; padding:29px; -webkit-border-radius:5px; -moz-border-radius:5px; border-radius:5px; opacity:0.9; opacity:0.9; -moz-opacity:0.9; -khtml-opacity:0.9; filter:alpha(opacity=90); position:absolute; display:none; }
+	#social .title { font-size:20px; color:#a07115; margin-bottom:12px; }
+	.loading { background:transparent url(../img/ajax-loader.gif) no-repeat right 0; padding-bottom:40px; }
+	#twitter p { line-height:14px; }
+		#twitter time { font-size:11px; color:#aaa; display:block; }
+		#twitter a { color:#6385aa; }
+  		#twitter a:hover { color:#999; }
+  #twitter-link { background:transparent url(../img/icon-twitter.gif) no-repeat left center; line-height:40px; padding-left:40px; display:block; }
+#bio { height:1%; color:#ddd; text-shadow:0 1px 0 #000; padding-top:5px; display:table; }
+  #bio h1 { font-size:50px; color:#a07115; text-shadow:-1px 1px 1px #202020; margin-bottom:10px; }
+  #bio h2 { font-size:24px; margin-bottom:4px; }
+  #bio h3 { font-size:14px; margin-bottom:12px; }
+  #bio span { display:none; }
+  #bio a { background:transparent url(../img/icon-linkedin.png) no-repeat left top; color:#ddd; line-height:30px; padding-left:36px; margin-bottom:20px; display:inline-block; }
+  	#bio a:hover { color:#6385aa; }
+
+
+/* ---------------- Sections ---------------- */
+
+section.expanded { cursor:default; }
+section .title { font-size:30px; color:#a07115; margin-bottom:0; }
+section a { color:#a07115; font-weight:bold; }
+	section a:hover { color:#555555; }
+section.expanded .title { margin-bottom:24px; }
+#wrapper section article.last { margin-bottom:0; }
+#sec-conocimientos { background-image:url("../img/icon-conocimientos.png"); }
+  #sec-conocimientos article { margin-bottom:10px; }
+    #sec-conocimientos article header { display:inline; }
+      #sec-conocimientos article header h1 { font-size:18px; margin-right:20px; display:inline; }
+      #sec-conocimientos article ul { display:inline; }
+        #sec-conocimientos article li { padding-top:7px; list-style:none; margin-right:6px; display:inline-block; }
+            #sec-conocimientos .level { background-image:url(../img/sp-level.gif); background-repeat:no-repeat; background-color:transparent; }
+            	#sec-conocimientos .level1 { background-position:center 0; }
+            	#sec-conocimientos .level2 { background-position:center -20px; }
+            	#sec-conocimientos .level3 { background-position:center -40px; }
+          #sec-conocimientos article li span { background-color:#555; color:#fff; padding:5px 7px; list-style:none; display:block; -webkit-border-radius:10px; -moz-border-radius:10px; border-radius:10px; }
+#sec-drupal { background-image:url("../img/icon-drupal.png"); background-position:328px 30px; width:328px; display:inline-block; vertical-align:top; }
+#sec-wordpress { background-image:url("../img/icon-wordpress.png"); background-position:328px 30px; width:328px; margin-left:20px; display:inline-block; vertical-align:top; }
+#sec-experiencia { background-image:url("../img/icon-experiencia.png"); }
+  #sec-experiencia article { margin-bottom:24px; overflow:hidden; }
+    #sec-experiencia article header { width:280px; padding-right:20px; border-right:1px solid #ddd; margin-right:20px; float:left; }
+    #sec-experiencia article h1 { font-size:20px; color:#a07115; margin-bottom:8px; }
+    #sec-experiencia article h2 { font-size:14px; margin-bottom:2px; }
+    #sec-experiencia article h3 { font-size:12px; margin-bottom:8px; }
+
+  
+/* ---------------- Footer ---------------- */
+
+footer ul { float:right; }
+	footer li { margin-left:24px;float:right; }
+footer p { line-height:52px; color:#777; text-shadow:0 1px 0 #000; float:left; }
+  footer a { color:#999; }
+  	footer a:hover { color:#6385aa; }

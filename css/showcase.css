@@ -1,0 +1,351 @@
+﻿/*
+Created by Sergio Cerrutti
+http://www.sergiocerrutti.com
+March 2011
+*/
+
+.showcase-content-container { border-bottom:1px solid #fff; }
+
+
+
+/* This class is removed after the showcase is loaded */
+/* Assign the correct showcase height to prevent loading jumps in IE */
+.showcase-load
+{
+	height: 470px; /* Same as showcase javascript option */
+	overflow: hidden;
+}
+
+/* Container when content is shown as one page */
+.showcase-onepage
+{
+	/**/
+}
+
+/* Container when content is shown in slider */
+.showcase
+{
+	position: relative;
+	margin: auto;
+}
+	
+	/* Navigation arrows */
+	.showcase-arrow-previous, .showcase-arrow-next
+	{
+		position: absolute;
+		background: url('../img/sp-arrows.png');
+		width: 33px;
+		height: 33px;
+		top: 220px;
+		cursor: pointer;
+	}
+	
+	.showcase-arrow-previous
+	{
+		left: -60px;
+	}
+	
+	.showcase-arrow-previous:hover
+	{
+		background-position: 0px -34px;
+	}
+	
+	.showcase-arrow-next
+	{
+		right: -56px;
+		background-position: -34px 0;
+	}
+	
+	.showcase-arrow-next:hover
+	{
+		background-position: -34px -34px;
+	}
+	
+	/* Content */
+	.showcase-content
+	{
+		background-color: #000;
+		text-align: center;
+	}
+	
+	.showcase-content img { border-left:10px solid #333; border-right:10px solid #333; box-shadow:0 0 50px; }
+		
+		.showcase-content-wrapper
+		{
+			text-align: center;
+			height: 470px;
+			width: 700px;
+			display: table-cell;
+			vertical-align: middle;
+		}
+		
+		/* Styling the tooltips */
+		.showcase-plus-anchor
+		{
+			background-image: url('../img/plus.png');
+			background-repeat: no-repeat;
+		}
+		
+		.showcase-plus-anchor:hover
+		{
+			background-position: -32px 0;
+		}
+		
+		div.showcase-tooltip
+		{
+			background-color: #fff;
+			color: #000;
+			text-align: left;
+			padding: 5px 8px;
+			background-image: url(../img/white-opacity-80.png);
+		}
+		
+		/* Styling the caption */
+		.showcase-caption
+		{
+			color: #000;
+			padding: 8px 15px;
+			text-align: left;
+			position: absolute;
+			bottom: 10px; left: 10px; right: 10px;
+			display: none;
+			background-image: url(../img/white-opacity-80.png);
+		}
+		
+	.showcase-onepage .showcase-content
+	{
+		margin-bottom: 10px;
+	}
+	
+	/* Button Wrapper */
+	.showcase-button-wrapper
+	{
+		clear: both;
+		margin-top: 10px;
+		text-align: center;
+	}
+	
+		.showcase-button-wrapper span
+		{
+			margin-right: 3px;
+			padding: 2px 5px 0px 5px;
+			cursor: pointer;
+			font-size: 12px;
+			color: #444444;
+		}
+	
+		.showcase-button-wrapper span.active
+		{
+			color: #fff;
+		}
+	
+	/* Thumbnails */
+	.showcase-thumbnail-container /* Used for backgrounds, no other styling!!! */
+	{
+		background-color:#eee; background-image:-moz-linear-gradient(top, #fff, #ddd);/* FF3.6 */ background-image:-webkit-gradient(linear,left top,left bottom,color-stop(0, #fff),color-stop(1, #ddd));/* Saf4+, Chrome */ background-image:-webkit-linear-gradient(#fff, #ddd);/* Chrome 10+, Saf6 */ background-image:linear-gradient(top, #fff, #ddd); filter:progid:DXImageTransform.Microsoft.gradient(startColorStr='#fff', EndColorStr='#ddd'); /* IE6–IE9 */ border-top:1px solid #ddd;
+	}
+	
+	.showcase-thumbnail-wrapper
+	{
+		overflow: hidden;
+	}
+		
+		.showcase-thumbnail
+		{
+			width: 75px;
+			height: 75px;
+			margin:0 5px;
+			cursor: pointer;
+			border: 5px solid #fff;
+			position: relative;
+			-webkit-border-radius:5px; -moz-border-radius:5px; border-radius:5px; -moz-box-shadow:0 0 5px rgba(0,0,0, 0.25); -webkit-box-shadow:0 0 5px rgba(0,0,0, 0.25); box-shadow:0 0 5px rgba(0,0,0, 0.25);
+			 opacity:0.70; -moz-opacity:0.70; -khtml-opacity:0.60; filter:alpha(opacity=70);
+		}
+		
+			.showcase-thumbnail-caption
+			{
+				position: absolute;
+				bottom: 2px;
+				padding-left: 10px;
+				padding-bottom: 5px;
+			}
+			
+			.showcase-thumbnail-content
+			{
+				padding: 10px;
+				text-align: center;
+				padding-top: 25px;
+			}
+			
+			.showcase-thumbnail-cover
+			{
+				background-image: url(../img/black-opacity-40.png);
+				position: absolute;
+				top: 0; bottom: 0; left: 0; right: 0;
+			}
+		
+		.showcase-thumbnail:hover
+		{
+			opacity:1;
+-moz-opacity:1;
+-khtml-opacity:1;
+filter:alpha(opacity=100);
+ -moz-box-shadow:0 0 10px rgba(0,0,0, 0.5); -webkit-box-shadow:0 0 10px rgba(0,0,0, 0.5); box-shadow:0 0 10px rgba(0,0,0, 0.5);
+		}
+		
+			.showcase-thumbnail:hover .showcase-thumbnail-cover
+			{
+				display: none;
+			}
+		
+		.showcase-thumbnail.active
+		{
+			opacity:1;
+-moz-opacity:1;
+-khtml-opacity:1;
+filter:alpha(opacity=100);
+ -moz-box-shadow:0 0 10px rgba(0,0,0, 0.5); -webkit-box-shadow:0 0 10px rgba(0,0,0, 0.5); box-shadow:0 0 10px rgba(0,0,0, 0.5);
+		}
+		
+			.showcase-thumbnail.active .showcase-thumbnail-cover
+			{
+				display: none;
+			}
+	
+	.showcase-thumbnail-wrapper-horizontal
+	{
+		padding: 10px;
+	}
+	
+	
+	.showcase-thumbnail-wrapper-vertical
+	{
+		padding: 10px;
+	}
+	
+		.showcase-thumbnail-wrapper-vertical .showcase-thumbnail
+		{
+			margin-bottom: 10px;
+		}
+		
+	.showcase-thumbnail-button-backward,
+	.showcase-thumbnail-button-forward
+	{
+		padding: 7px;
+		cursor: pointer;
+	}
+	
+	.showcase-thumbnail-button-backward
+	{
+		padding-bottom: 0px;
+		padding-right: 0px;
+	}
+	
+		.showcase-thumbnail-button-backward .showcase-thumbnail-vertical,
+		.showcase-thumbnail-button-forward .showcase-thumbnail-vertical,
+		.showcase-thumbnail-button-forward .showcase-thumbnail-horizontal,
+		.showcase-thumbnail-button-backward .showcase-thumbnail-horizontal
+		{
+			background-image: url(../img/sp-arrows-small.png);
+			background-repeat: no-repeat;
+			display: block;
+			width: 17px;
+			height: 17px;
+		}
+		
+		.showcase-thumbnail-button-backward .showcase-thumbnail-vertical
+		{
+			background-position: 0 -51px;
+			margin-left: 55px;
+		}
+		.showcase-thumbnail-button-backward:hover .showcase-thumbnail-vertical
+		{
+			background-position: -17px -51px;
+		}
+		
+		.showcase-thumbnail-button-forward .showcase-thumbnail-vertical
+		{
+			background-position: 0 -34px;
+			margin-left: 55px;
+		}
+		.showcase-thumbnail-button-forward:hover .showcase-thumbnail-vertical
+		{
+			background-position: -17px -34px;
+		}
+		
+		.showcase-thumbnail-button-backward .showcase-thumbnail-horizontal
+		{
+			background-position: 0 -17px;
+			margin-top: 40px;
+			margin-bottom: 40px;
+		}
+		.showcase-thumbnail-button-backward:hover .showcase-thumbnail-horizontal
+		{
+			background-position: -17px -17px;
+		}
+		
+		.showcase-thumbnail-button-forward .showcase-thumbnail-horizontal
+		{
+			background-position: 0 0;
+			margin-top: 40px;
+			margin-bottom: 40px;
+		}
+		.showcase-thumbnail-button-forward:hover .showcase-thumbnail-horizontal
+		{
+			background-position: -17px 0;
+		}
+		
+		/* Hide button text */
+		.showcase-thumbnail-button-forward span span,
+		.showcase-thumbnail-button-backward span span
+		{
+			display: none;
+		}
+
+
+
+
+.showcase-content
+{
+	background-color: inherit;
+}
+
+.showcase-onepage .static-caption
+{
+	background-color: #dfdfdf;
+	color: #333;
+}
+
+/* Navigation arrows */
+.showcase-arrow-previous, .showcase-arrow-next
+{
+	z-index: 20;
+}
+
+.showcase-arrow-previous
+{
+	left: 30px;
+}
+.showcase-arrow-next
+{
+	right: 30px;
+}
+
+/* Thumbnails */
+.showcase-thumbnail-wrapper
+{
+	overflow: hidden;
+	margin: auto;
+}
+
+/* Caption */
+.static-caption
+{
+	width:100%;
+	text-align: center;
+	color: #e0e0e0;
+	padding: 10px 0;
+	margin: 0;
+	position: absolute;
+	top:0;
+}
