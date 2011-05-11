@@ -38,18 +38,18 @@ function linkHashtags(text) {
 $.ajaxSetup({ cache:false });
 function loadTweets() {
 	$.getJSON("http://twitter.com/statuses/user_timeline/sergiocerrutti.json?count=2&format=json&callback=?", function(data){
-  	$("#social").stop(true, true).fadeIn();
-		$("#twitter").addClass("loading");
-		$('#twitter .content').fadeOut("slow", function() {
-			$(this).empty();
-			for(i=0; i<2; i++) {
-	  		$('#twitter .content').append(linkHashtags('<article><p><time>Hace ' + TwitterDateConverter(data[i].created_at) + '</time>' + data[i].text + '</p></article>'));
-	  	}
-	  	$('#twitter .content').fadeIn("slow", function() {
-	  		$("#twitter").removeClass("loading");
-	  		setTimeout(fadear,3000);
-	  	});
-		});
+	  	$("#social").stop(true, true).fadeIn();
+			$("#twitter").addClass("loading");
+			$('#twitter .content').fadeOut("slow", function() {
+				$(this).empty();
+				for(i=0; i<2; i++) {
+		  		$('#twitter .content').append(linkHashtags('<article><p><time>Hace ' + TwitterDateConverter(data[i].created_at) + '</time>' + data[i].text + '</p></article>'));
+		  	}
+		  	$('#twitter .content').fadeIn("slow", function() {
+		  		$("#twitter").removeClass("loading");
+		  		setTimeout(fadear,3000);
+		  	});
+			});
   	
 	});
 	setTimeout(loadTweets,20000);

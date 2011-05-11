@@ -63,14 +63,14 @@ $.getJSON(flickrUrl, function (data) {
 	});
 	
 	$("#wrapper-top").hover(function() {
-  	$(this).stop(true, true).animate({ top:"0" }, 750, function() { $("#flickr-alert").fadeOut(); });
+  	$("#wrapper-top").stop(true, true).animate({ top:"0" }, 750, function() { $("#flickr-alert").fadeOut(); });
 	},function() {
-	  $(this).queue(function() {
+	  $("#wrapper-top").queue(function() {
 	  setTimeout(function(){
-			$(this).dequeue();
+			$("#wrapper-top").dequeue();
 		}, 750);
 		});
-	  $(this).animate({ top:"-587" }, 250, function() { $("#flickr-alert").fadeIn(); });
+	  $("#wrapper-top").animate({ top:"-587" }, 250, function() { $("#flickr-alert").fadeIn(); });
 	});
 	
 });

@@ -179,7 +179,7 @@ March 2011
 			
 			.showcase-thumbnail-cover
 			{
-				background-image: url(../img/black-opacity-40.png);
+				/*background-image: url(../img/black-opacity-40.png);*/
 				position: absolute;
 				top: 0; bottom: 0; left: 0; right: 0;
 			}
@@ -246,7 +246,7 @@ filter:alpha(opacity=100);
 		.showcase-thumbnail-button-forward .showcase-thumbnail-horizontal,
 		.showcase-thumbnail-button-backward .showcase-thumbnail-horizontal
 		{
-			background-image: url(../img/sp-arrows-small.png);
+			/*background-image: url(../img/sp-arrows-small.png);*/
 			background-repeat: no-repeat;
 			display: block;
 			width: 17px;

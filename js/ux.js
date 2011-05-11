@@ -32,6 +32,6 @@ $(document).ready(function() {
 	});
 	
 	// Cargamos el tweetline
-	loadTweets();
+	//loadTweets();
 	
 });
