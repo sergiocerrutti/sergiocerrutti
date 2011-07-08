@@ -6,7 +6,5 @@
 	Location: Madrid, Spain.
                     
 /* SITE */
-	Last update: 2011/05/11
 	Standards: HTML5, CSS3, Microformats.
 	Components: jQuery, Flickr API, Twitter API, Awkward Showcase.
-	Software: Adobe Photoshop, Panic Coda.
